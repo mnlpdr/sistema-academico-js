@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Disciplinas</title>
+</head>
+<body>
+    <h1>Cadastro de Disciplinas</h1>
+    
+    Informe o Nome da Disciplina: <input id ="nomeDisciplina"> <br><br>
+    
+    Informe o Código da Disciplina: <input id ="codigoDisciplina"> <br><br>
+
+    <button onclick="disciplinaControlador.inserir()">Cadastrar Disciplina</button>
+
+    <h1>Listagem de Disciplinas</h1>
+    <p id = 'disciplina'>Nome - Código da Disciplina</p>
+
+    <script src="js/model/disciplina.js"></script>
+    <script src="js/model/aluno.js"></script>
+    <script src="js/controller/aluno-controlador.js"></script>
+    <script src="js/controller/disciplina-controlador.js"></script>
+    <script src="js/repositorio/aluno-repositorio.js"></script>
+    <script src="js/repositorio/disciplina-repositorio.js"></script>
+    <script src="js/servico/aluno-servico.js"></script>
+    <script src="js/servico/disciplina-servico.js"></script>
+
+
+</body>
+
+</html>
