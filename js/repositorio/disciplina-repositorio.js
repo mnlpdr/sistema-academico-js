@@ -8,7 +8,7 @@ class DisciplinaRepositorio {
 
     inserir(disciplina) {
         this._disciplinas.push(disciplina);
-    // return disciplina;
+        return disciplina;
     }
 
     remover(codigo) {
@@ -34,13 +34,10 @@ class DisciplinaRepositorio {
 
 //Inserir e Remover Aluno por Disciplina
 
-    inserirAlunoDisciplina(codigo, aluno) {
+    inserirAlunoNaDisciplina(codigo, aluno) {
     const alunos = disciplina.alunos;
-    console.log(alunos)
     alunos.push(aluno);
     disciplina.alunos = alunos;
-
-    //const disciplina = this.buscaCodigo(codigo);
 
     }
 
