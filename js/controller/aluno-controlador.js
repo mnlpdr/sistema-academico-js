@@ -28,8 +28,11 @@ class AlunoControlador {
             }
         );
         elementoP.appendChild(elementoBotaoApagar);
-        document.body.appendChild(elementoP);
+        document.querySelector('#ListaAlunos').appendChild(elementoP);
+    //document.querySelector('#ListaDisciplinas').appendChild(elementoP)
     }
+
+
 
     removerAlunoDaLista(nome) {
         this.alunoServico.remover(nome);

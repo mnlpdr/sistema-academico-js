@@ -30,7 +30,7 @@ class DisciplinaControlador {
             }
         );
         elementoP.appendChild(elementoBotaoApagar);
-        document.body.appendChild(elementoP);
+        document.querySelector('#ListaDisciplinas').appendChild(elementoP);
     }
 
     removerDisciplina(codigo){
@@ -83,7 +83,7 @@ class DisciplinaControlador {
         );
         elementoP.appendChild(elementoBotaoApagar);
         elementoP.setAttribute("discCodigo", codigo);
-        document.querySelector('#AlunoNaDisciplina').appendChild(elementoP);
+        document.querySelector('#ListaAlunoNaDisciplina').appendChild(elementoP);
     }
        
 
