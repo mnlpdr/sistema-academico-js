@@ -9,8 +9,8 @@ class DisciplinaServico {
             return this.repositorio.inserir(disciplina);
         }
         else {
-            console.log("Erro. Verifique se a disciplina já foi cadastrada anteriormente");
-            return undefined;
+            return alert("Erro. Verifique se a disciplina já foi cadastrada anteriormente");
+            
         }
     }
 
@@ -30,12 +30,12 @@ class DisciplinaServico {
         return this.repositorio.buscarCodigo(codigo);
     }
 
-    inserirAlunoDisciplina(codigo, aluno){
+    inserirAlunoNaDisciplina(codigo, aluno){
         const disciplina = this.repositorio.buscarCodigo(codigo);
         if (disciplina !== undefined) {
-            this.repositorio.inserirAlunoDisciplina(disciplina, aluno)
+            this.repositorio.inserirAlunoNaDisciplina(disciplina, aluno)
         }
-        //return undefined?
+        
         else {
             console.log('Erro. Verificar dados informados')
         }
