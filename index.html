@@ -2,21 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Cadastro de Alunos e Diários de Classe</title>
 </head>
 <body>
-    Nome: <input id="nome"> <br>
-    Idade: <input id="idade"> <br>
 
-    <button onclick="alunoControlador.inserir()">Inserir</button>
 
-    <h1>Listagem de Alunos</h1>
-    <p>Nome - Idade</p>
+    <!-- ALUNOS --> 
+    <h1>Cadastro de Alunos</h1>
 
+    Informe o nome do Aluno: <input id="nome"> <br><br>
+
+    Informe a idade do Aluno: <input id="idade"> <br><br>
+
+    <button onclick="alunoControlador.inserir()">Cadastrar</button>
+
+    <h2>Listagem de Alunos</h2>
+    <p id ='alunos'>Nome - Idade</p>
+    <!--TENHO QUE TRAZER A IMPRESSÃO DA LISTA PARA CÁ-->
+
+     <!-- DISCIPLINAS --> 
+    <h1>Cadastro de Disciplinas</h1>
+
+    Informe o código da Disciplina: <input id="codigoDisciplina"> <br><br>
+
+    Informe o nome da Disciplina: <input id="nomeDisciplina"> <br><br>
+
+    <button onclick="disciplinaControlador.inserir()">Cadastrar</button>
+
+    <h2>Listagem de Disciplinas</h2>
+    <p id ='disciplinas'>Código - Nome</p>
+
+    
+    <!-- Aluno NA Disciplina --> 
+    <h1>Matrícula de Alunos em Disciplinas</h1>
+
+    Informe o nome do aluno a ser matriculado: <input id="nomeAlunoQ"> <br><br>
+    Informe o código da Disciplina na qual ele será matriculado: <input id="codigoDisciplinaQ"> <br><br>
+    <button onclick="disciplinaControlador.inserirAlunoNaDisciplina()">Inserir</button> <br>
+
+    <h2>Lista de Matriculados<br></h2>
+    Código - Aluno - Disciplina
+    <p id ='AlunoNaDisciplina'></p>
+
+
+    <script src="js/model/disciplina.js"></script>
     <script src="js/model/aluno.js"></script>
-    <script src="js/repositorio/aluno-repositorio.js"></script>
-    <script src="js/servico/aluno-servico.js"></script>
     <script src="js/controller/aluno-controlador.js"></script>
+    <script src="js/controller/disciplina-controlador.js"></script>
+    <script src="js/repositorio/aluno-repositorio.js"></script>
+    <script src="js/repositorio/disciplina-repositorio.js"></script>
+    <script src="js/servico/aluno-servico.js"></script>
+    <script src="js/servico/disciplina-servico.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

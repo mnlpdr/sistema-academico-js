@@ -7,11 +7,11 @@ class DisciplinaServico {
         const disciplina = new Disciplina(codigo, nome);
         if (this.repositorio.buscarCodigo(codigo) === undefined){
             return this.repositorio.inserir(disciplina);
-        }
-        else {
-            return alert("Erro. Verifique se a disciplina já foi cadastrada anteriormente");
-            
-        }
+        } else { 
+            console.log('Erro. Verificar dados informados.')
+            return undefined;
+            }
+        
     }
 
     remover (codigo) {
@@ -34,10 +34,6 @@ class DisciplinaServico {
         const disciplina = this.repositorio.buscarCodigo(codigo);
         if (disciplina !== undefined) {
             this.repositorio.inserirAlunoNaDisciplina(disciplina, aluno)
-        }
-        
-        else {
-            console.log('Erro. Verificar dados informados')
         }
     }
 

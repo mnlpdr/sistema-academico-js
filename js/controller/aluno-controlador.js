@@ -23,7 +23,7 @@ class AlunoControlador {
         elementoBotaoApagar.textContent = "X";
 
         elementoBotaoApagar.addEventListener('click', (event) => {
-                this.removerAlunoDaLista(nome);
+                this.removerAlunoDaLista(nome); 
                 event.target.parentElement.remove();
             }
         );

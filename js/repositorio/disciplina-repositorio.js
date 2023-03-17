@@ -29,7 +29,7 @@ class DisciplinaRepositorio {
     }
 
     buscarCodigo(codigo) {
-    return this._disciplinas.filter(disciplina => disciplina.codigo == codigo);
+    return this._disciplinas.find(disciplina => disciplina.codigo == codigo);
     }
 
 //Inserir e Remover Aluno por Disciplina
