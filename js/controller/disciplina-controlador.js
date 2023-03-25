@@ -7,7 +7,7 @@ class DisciplinaControlador {
         const nomeDisciplina = document.querySelector('#nomeDisciplina').value;
         const codigoDisciplina = Number(document.querySelector('#codigoDisciplina').value);
         const inserirDisciplina = this.disciplinaServico.inserir(codigoDisciplina, nomeDisciplina);
-        console.log(inserirDisciplina);
+        
         if (inserirDisciplina) {
             this.mostrarDisciplina(codigoDisciplina, nomeDisciplina);
             alert('Disciplina inserida com sucesso');
@@ -77,7 +77,7 @@ class DisciplinaControlador {
         elementoBotaoApagar.textContent = "X";
 
         elementoBotaoApagar.addEventListener('click', (event) => {
-                this.removerAlunoDaDisciplina(event.target.parentElement.getAttribute("discCodigo"), nome);
+                this.removerAlunoDisciplina(event.target.parentElement.getAttribute("discCodigo"), nome);
                 event.target.parentElement.remove();
             }
         );
