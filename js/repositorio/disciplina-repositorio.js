@@ -34,7 +34,7 @@ class DisciplinaRepositorio {
 
 //Inserir e Remover Aluno por Disciplina
 
-    inserirAlunoNaDisciplina(codigo, aluno) {
+    inserirAlunoNaDisciplina(aluno, disciplina) {
     const alunos = disciplina.alunos;
     alunos.push(aluno);
     disciplina.alunos = alunos;
