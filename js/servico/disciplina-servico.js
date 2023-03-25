@@ -37,10 +37,19 @@ class DisciplinaServico {
         }
     }
 
-    removerAlunoDisciplina(nome) {
+    removerAlunoDisciplina(codigo, nome) {
         const disciplina = this.repositorio.buscarCodigo(codigo);
         if (disciplina !== undefined) {
             this.repositorio.removerAlunoDisciplina(disciplina, aluno);
         }
     }
+
+    // no SERVIÇO:
+    // removerAlunoDisciplina(codigo, nome) {
+    //     const disciplina = this.disciplinaServico.buscarCodigo(codigo);
+    //     const aluno = new Aluno(nome);
+    //     this.disciplinaServico.removerAlunoDisciplina(disciplina, aluno);
+    // }
+
+
 }
